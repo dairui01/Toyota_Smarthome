@@ -7,6 +7,7 @@ import torch.nn.init as init
 
 
 class SDTCN(nn.Module):
+    # SDTCN is adapted from the MS-TCN (CVPR19)
     def __init__(self, inter_dim=256, input_dim=1024, num_classes=157):
         super(Dilated_TCN, self).__init__()
         self.inter_dim = int(inter_dim)
