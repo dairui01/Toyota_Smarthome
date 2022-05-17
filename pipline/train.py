@@ -299,11 +299,6 @@ if __name__ == '__main__':
         mid_channel=int(args.num_channel)
 
 
-        if args.model=="SDTCN":
-            print("you are processing SDTCN")
-            from models import SDTCN as Net
-            model = Net(mid_channel, input_channnel, classes)
-
         if args.model=="PDAN":
             print("you are processing PDAN")
             from models import PDAN as Net
