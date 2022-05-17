@@ -89,7 +89,7 @@ if args.dataset == 'TSU':
     train_split = './data/smarthome_CS_51.json'
     test_split = './data/smarthome_CS_51.json'
     classes=51
-    rgb_root = '/RGB/feature/Path'
+    rgb_root = '/data/stars/user/rdai/smarthome_untrimmed/features/i3d_16frames_64000_SSD'
     skeleton_root='/skeleton/feat/Path/' # 
 
 def sigmoid(x):
@@ -104,7 +104,6 @@ def load_data_rgb_skeleton(train_split, val_split, root_skeleton, root_rgb):
         dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle=True, num_workers=0,
                                                  pin_memory=True, collate_fn=collate_fn) # 8
     else:
-
         dataset = None
         dataloader = None
 
@@ -144,7 +143,7 @@ def load_data(train_split, val_split, root):
 def run(models, criterion, num_epochs=50):
     since = time.time()
 
-    best_loss = 10000
+    best_map = 0.0
     for epoch in range(num_epochs):
         print('Epoch {}/{}'.format(epoch, num_epochs - 1))
         print('-' * 10)
@@ -156,7 +155,11 @@ def run(models, criterion, num_epochs=50):
             probs.append(prob_val)
             sched.step(val_loss)
 
-
+            if best_map < val_map:
+                best_map = val_map
+                torch.save(model.state_dict(),'./'+str(args.model)+'/weight_epoch_'+str(args.lr)+'_'+str(epoch))
+                torch.save(model,'./'+str(args.model)+'/model_epoch_'+str(args.lr)+'_'+str(epoch))
+                print('save here:','./'+str(args.model)+'/weight_epoch_'+str(args.lr)+'_'+str(epoch))
 
 def eval_model(model, dataloader, baseline=False):
     results = {}
@@ -185,12 +188,13 @@ def run_network(model, data, gpu, epoch=0, baseline=False):
 
     inputs = inputs.squeeze(3).squeeze(3)
     activation = model(inputs, mask_new)
-   
- 
-
     
     outputs_final = activation
 
+    if args.model=="PDAN":
+        # print('outputs_final1', outputs_final.size())
+        outputs_final = outputs_final[:,0,:,:]
+    # print('outputs_final',outputs_final.size())
     outputs_final = outputs_final.permute(0, 2, 1)  
     probs_f = F.sigmoid(outputs_final) * mask.unsqueeze(2)
     loss_f = F.binary_cross_entropy_with_logits(outputs_final, labels, size_average=False)
@@ -218,7 +222,6 @@ def train_step(model, gpu, optimizer, dataloader, epoch):
         apm.add(probs.data.cpu().numpy()[0], data[2].numpy()[0])
         error += err.data
         tot_loss += loss.data
-
         loss.backward()
         optimizer.step()
     if args.APtype == 'wap':
@@ -300,6 +303,11 @@ if __name__ == '__main__':
             print("you are processing SDTCN")
             from models import SDTCN as Net
             model = Net(mid_channel, input_channnel, classes)
+
+        if args.model=="PDAN":
+            print("you are processing PDAN")
+            from models import PDAN as Net
+            model = Net(num_stages=1, num_layers=5, num_f_maps=mid_channel, dim=input_channnel, num_classes=classes)
 
 
         model=torch.nn.DataParallel(model)
