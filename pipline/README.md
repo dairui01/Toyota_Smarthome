@@ -37,6 +37,15 @@ If you find our repo or paper useful, please cite us as
   number={},
   pages={1-1},
   doi={10.1109/TPAMI.2022.3169976}}
+  
+@inproceedings{dai2021pdan,
+  title={Pdan: Pyramid dilated attention network for action detection},
+  author={Dai, Rui and Das, Srijan and Minciullo, Luca and Garattoni, Lorenzo and Francesca, Gianpiero and Bremond, Francois},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={2970--2979},
+  year={2021}
+}
+
 ```
 
 
