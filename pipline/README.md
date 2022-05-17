@@ -3,9 +3,7 @@
 This is the pipline code for Toyota Smarthome Untrimmed dataset (fine-grained version). The dataset description and original video can be request in this [project page](https://project.inria.fr/toyotasmarthome/).
 
 ## Prepare the I3D feature
-Like the previous works for action detection, the model can be built on top of the pre-trained I3D features. Thus, feature extraction is needed before training the network.  We have preextracted the I3D feature for RGB and 3D pose feature for AGCN. Here are the download links:
-- RGB-I3D feature [link]()
-- 3D Pose-AGCN feature [link]()
+Like the previous works for action detection, the model can be built on top of the pre-trained I3D features. Thus, feature extraction is needed before training the network.  We have preextracted the I3D feature for RGB and 3D pose feature for AGCN. Features can be found in [dataset website](https://project.inria.fr/toyotasmarthome/).
 
 ## Dependencies 
 Please satisfy the following dependencies to train MS-TCT correctly: 
@@ -16,10 +14,16 @@ Please satisfy the following dependencies to train MS-TCT correctly:
 - scikit-learn
 - numpy
 
+## Model
+In this repository, you can train and test with [PDAN (WACV2021)](https://openaccess.thecvf.com/content/WACV2021/html/Dai_PDAN_Pyramid_Dilated_Attention_Network_for_Action_Detection_WACV_2021_paper.html). 
+The pretrained model can be downloaded in this [link](https://mybox.inria.fr/f/5e006560efaf4e0fb7ac/).
+
 ## Quick Start
 1. Change the _rgb_root_ or _skeleton_root_ to the extracted feature path in the _train.py_. 
-2. Use `./run.sh` for training on TSU-RGB. Evaluate with skeleton can be realized by changing the _-mode_ in _run.sh_ to _skeleton_.
+2. Use `./run_PDAN.sh` for training on TSU-RGB. Evaluate with skeleton can be realized by changing the _-mode_ in _run.sh_ to _skeleton_.
 3. The method is evaluate by the per-frame mAP. The event-based mAP can be found at this [repo](https://github.com/dairui01/TSU_evaluation/tree/main/Event_map).
+
+
 
 ## Reference
 If you find our repo or paper useful, please cite us as
