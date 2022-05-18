@@ -28,15 +28,13 @@ The pre-trained model can be downloaded in this [link](https://mybox.inria.fr/f/
 ## Reference
 If you find our repo or paper useful, please cite us as
 ```bibtex
-@ARTICLE{Dai_2022_PAMI,
+@article{dai2022toyota,
+  title={Toyota smarthome untrimmed: Real-world untrimmed videos for activity detection},
   author={Dai, Rui and Das, Srijan and Sharma, Saurav and Minciullo, Luca and Garattoni, Lorenzo and Bremond, Francois and Francesca, Gianpiero},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
-  title={Toyota Smarthome Untrimmed: Real-World Untrimmed Videos for Activity Detection}, 
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
   year={2022},
-  volume={},
-  number={},
-  pages={1-1},
-  doi={10.1109/TPAMI.2022.3169976}}
+  publisher={IEEE}
+}
   
 @inproceedings{dai2021pdan,
   title={Pdan: Pyramid dilated attention network for action detection},
