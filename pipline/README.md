@@ -15,8 +15,9 @@ Please satisfy the following dependencies to train MS-TCT correctly:
 - numpy
 
 ## Model
-In this repository, you can train and test with [PDAN (WACV2021)](https://openaccess.thecvf.com/content/WACV2021/html/Dai_PDAN_Pyramid_Dilated_Attention_Network_for_Action_Detection_WACV_2021_paper.html). 
-The pre-trained model can be downloaded in this [link](https://mybox.inria.fr/f/5e006560efaf4e0fb7ac/). The obtained f-mAP should be around 32.7%.
+In this repository, you can train and test with [PDAN (WACV2021)](https://openaccess.thecvf.com/content/WACV2021/html/Dai_PDAN_Pyramid_Dilated_Attention_Network_for_Action_Detection_WACV_2021_paper.html).  
+
+A pre-trained model for RGB modality and CS protocol can be downloaded in this [link](https://mybox.inria.fr/f/5e006560efaf4e0fb7ac/). The obtained f-mAP should be around 32.7%.
 
 ## Quick Start
 1. Change the _rgb_root_ or _skeleton_root_ to the extracted feature path in the _train.py_. 
