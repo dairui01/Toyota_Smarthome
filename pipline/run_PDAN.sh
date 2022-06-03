@@ -5,6 +5,7 @@ export PATH=/home/rdai/anaconda3/envs/torch1.9/bin:$PATH
 python train.py \
 -dataset TSU \
 -mode rgb \
+-split_setting CS \
 -model PDAN \
 -train True \
 -num_channel 512 \
