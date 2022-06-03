@@ -40,6 +40,7 @@ parser.add_argument('-num_channel', type=str, default='False')
 parser.add_argument('-batch_size', type=str, default='False')
 parser.add_argument('-kernelsize', type=str, default='False')
 parser.add_argument('-feat', type=str, default='False')
+parser.add_argument('-split_setting', type=str, default='CS')
 args = parser.parse_args()
 
 import torch
@@ -84,11 +85,20 @@ if str(args.APtype) == 'map':
 batch_size = int(args.batch_size)
 
 if args.dataset == 'TSU':
+    split_setting=str(args.split_setting)
+    
     from smarthome_i3d_per_video import TSU as Dataset
     from smarthome_i3d_per_video import TSU_collate_fn as collate_fn
-    train_split = './data/smarthome_CS_51.json'
-    test_split = './data/smarthome_CS_51.json'
     classes=51
+    
+    if split_setting =='CS':
+        train_split = './data/smarthome_CS_51.json'
+        test_split = './data/smarthome_CS_51.json'
+        
+    elif split_setting =='CV':
+        train_split = './data/smarthome_CV_51.json'
+        test_split = './data/smarthome_CV_51.json'
+    
     rgb_root = '/data/stars/user/rdai/smarthome_untrimmed/features/i3d_16frames_64000_SSD'
     skeleton_root='/skeleton/feat/Path/' # 
 
