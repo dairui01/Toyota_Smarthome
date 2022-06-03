@@ -11,8 +11,8 @@ python train.py \
 -num_channel 512 \
 -lr 0.0002 \
 -kernelsize 3 \
--comp_info TSU_TCN \
 -APtype map \
 -epoch 140 \
 -batch_size 2 \
+-comp_info TSU_CS_RGB_PDAN
 
