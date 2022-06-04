@@ -6,7 +6,7 @@ This is the pipeline code for Toyota Smarthome Untrimmed dataset (fine-grained v
 Like the previous works for action detection, the model can be built on top of the pre-trained I3D features. Thus, feature extraction is needed before training the network.  We have pre-extracted the I3D feature for RGB and 3D pose feature for AGCN. Those features can be downloaded in [dataset website](https://project.inria.fr/toyotasmarthome/).
 
 ## Dependencies 
-Please satisfy the following dependencies to train MS-TCT correctly: 
+Please satisfy the following dependencies to use this code correctly: 
 - pytorch 1.9
 - python 3.8 
 - timm 0.4.12
