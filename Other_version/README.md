@@ -38,11 +38,11 @@ Given a pair of videos of  two different views  of same scenario, should have ov
 
 In joint view we utilise features from video pairs of two different views. There are close to 298 videos thereby giving us a pair of 149 videos. The features from this pairs of videos with different views are combined at various stages of a 2-Stream TCN network like for example late [fusion](https://github.com/hari431996/joint_view_action_detection/tree/main/joint_view_late_fusion).
 
-### Datasets Overview.
+### JSON Overview.
 
 There are three kinds of datasets used, they are present in each folder corresponding to the experiment they were utilised in.
 
-1). smarthome_CS_51.json - This is original Toyota smarthome untrimmed dataset. The json file contains annotations of 536 videos and there are 51 class label actions.
+1). smarthome_CS_51.json - This is original Toyota smarthome untrimmed dataset (CS protocol). The json file contains annotations of 536 videos and there are 51 class label actions.
 
 2). unbalanced_data_synchronised_footage.json - This datset consists of annotations of 298 videos but the videos are in pairs and each pair have synchronised footage. Also the dataset contains, 51 label actions.
 
