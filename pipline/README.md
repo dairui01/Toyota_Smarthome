@@ -24,7 +24,7 @@ A pre-trained model for RGB modality and CS protocol can be downloaded in this [
 2. Use `./run_PDAN.sh` for training on TSU-RGB. Evaluation with skeleton can be realized by changing the `-mode` in _run.sh_ to _skeleton_.
 3. The method is evaluated by the per-frame mAP. The event-based mAP can be found at this [repo](https://github.com/dairui01/TSU_evaluation/tree/main/Event_map).
 4. For diiferent split settings (e.g. Cross-Subject or Cross-View), you can change it to either _CS_ or _CV_ for the `-split_setting` parameter in the command. 
-5. For loading the pretrained model, you can add/change the `-load_model` parameter to the pre-trained model path (e.g., `./PDAN_TSU_RGB`).
+5. For loading the pretrained model, you can add/change the `-load_model` parameter to the pre-trained model path (e.g., `'./PDAN_TSU_RGB'`).
 
 
 
