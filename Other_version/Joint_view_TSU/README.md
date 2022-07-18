@@ -1,4 +1,8 @@
 # Joint-view TSU
+
+The `videos_sync.csv` provides the annotation to obtain the synchronized TSU from two views. 
+After having the synchronized videos and extracted the I3D features, we can perform the join-view action detection. 
+
 In this experiment, we use a 2 stream TCN architecture, where after there are 5 stages of TCN blocks and after each block theres a fusion so that thers information flow inbetween both the 2 streams. The dataset used is unbalanced with 51 actions and the footage is synchronised.
 
 1). models_xxx - This file basically contains network architecture/backbone.
