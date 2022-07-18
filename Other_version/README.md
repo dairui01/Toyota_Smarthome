@@ -1,17 +1,19 @@
-# Balanced TSU
+# Blanced TSU and Joint-view TSU
+
+## Balanced TSU
 
 Balanced TSU is a version of the dataset that overlooks the fine-grained details (e.g., the manipulated object) but keeps only the different movement patterns (e.g., cut, drink). There are many activity classes that have a limited number of instances (i.e., samples) in the fine-grained TSU version. This is because some activity classes with specific fine-grained details occur rarely as activity instances within the dataset which may not be sufficient to learn activity-specific representations. Thus to handle this, we release Balanced TSU, which focuses on the different movement patterns of the activity (i.e., verb) rather than the fine-grained details (i.e., noun). Balanced TSU shared the same untrimmed videos as fine-grained TSU: 536 videos with 21 minutes average duration. The only difference lies in the annotation. This version of the dataset merges the fine-grained activities that share similar motion into the same activity class. Therefore, this version of dataset is more balanced in terms of the number of samples, with slightly less number of classes (in total 34 activity classes).
 
 ![](/Images/Balanced_TSU.png)
 
-# Joint-View TSU
+## Joint-View TSU
 
 The goal of the project is combine footage of same scenario taken by two different cameras placed in 2 diffrerent places and then perform action recognition. This repositry includes various experiments that were performed inconjunction with joint view.
 
 <img src="/gifs/Sit_down_v1.gif" width="300" height="200"/> <img src="/gifs/Sit_down_v2.gif" width="300" height="200"/> 
 
 
-## Introduction.
+### Introduction.
 
 Joint view action detection/recognition is nothing but combining footage of same scenarios captured in different views to perform action detetction. This is a challenging task for any current state of the art action recognition methods because there is a huge difference in visual features across different views even though the scenario is same. The main aim of the project is to obtain a combined feature level representation/embedding from different views that can be used to improve action detection perdformance.This is done in two steps.
 
@@ -21,7 +23,7 @@ Joint view action detection/recognition is nothing but combining footage of same
 
 The main dataset that we used in this project is Toyota smarthome untrimmed dataset[2].
 
-## Experiments and Terminology.
+### Experiments and Terminology.
 Along with joint view we have performed various experiments on the Toyota untrimmed smarthome dataset and have named each folder accordingly. The essential terms necessary to understand the project are .
 
 * Balanced and Unbalanced Dataset.
@@ -36,7 +38,7 @@ Given a pair of videos of  two different views  of same scenario, should have ov
 
 In joint view we utilise features from video pairs of two different views. There are close to 298 videos thereby giving us a pair of 149 videos. The features from this pairs of videos with different views are combined at various stages of a 2-Stream TCN network like for example late [fusion](https://github.com/hari431996/joint_view_action_detection/tree/main/joint_view_late_fusion).
 
-## Datasets Overview.
+### Datasets Overview.
 
 There are three kinds of datasets used, they are present in each folder corresponding to the experiment they were utilised in.
 
@@ -47,7 +49,7 @@ There are three kinds of datasets used, they are present in each folder correspo
 3). unsynchronised_balance_data_annotation.json - This dataset consists of annotations of 536 videos but the action labels are only 34 instead of 51 like in the previous datasets.
 
 
-## References.
+### References.
 
 [1]. Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset, CVPR 2017
 
