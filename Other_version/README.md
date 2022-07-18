@@ -10,7 +10,7 @@ Balanced TSU is a version of the dataset that overlooks the fine-grained details
 
 The goal of the project is combine footage of same scenario taken by two different cameras placed in 2 diffrerent places and then perform action recognition. This repositry includes various experiments that were performed inconjunction with joint view.
 
-<img src="/gifs/Sit_down_v1.gif" width="300" height="200"/> <img src="/gifs/Sit_down_v2.gif" width="300" height="200"/> 
+<img src="/Images/Sit_down_v1.gif" width="300" height="200"/> <img src="/Images/Sit_down_v2.gif" width="300" height="200"/> 
 
 
 ### Introduction.
