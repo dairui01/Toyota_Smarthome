@@ -318,7 +318,10 @@ if __name__ == '__main__':
         model=torch.nn.DataParallel(model)
 
         if args.load_model!= "False":
-            model.load_state_dict(torch.load(str(args.load_model)))
+            # entire model
+            model = torch.load(args.load_model)
+            # weight
+            # model.load_state_dict(torch.load(str(args.load_model)))
             print("loaded",args.load_model)
 
         pytorch_total_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
