@@ -1,17 +1,16 @@
 # Blanced TSU and Joint-view TSU
 
-[](/Balanced_TSU.PNG)
 ## Balanced TSU
 
 Balanced TSU is a version of the dataset that overlooks the fine-grained details (e.g., the manipulated object) but keeps only the different movement patterns (e.g., cut, drink). There are many activity classes that have a limited number of instances (i.e., samples) in the fine-grained TSU version. This is because some activity classes with specific fine-grained details occur rarely as activity instances within the dataset which may not be sufficient to learn activity-specific representations. Thus to handle this, we release Balanced TSU, which focuses on the different movement patterns of the activity (i.e., verb) rather than the fine-grained details (i.e., noun). Balanced TSU shared the same untrimmed videos as fine-grained TSU: 536 videos with 21 minutes average duration. The only difference lies in the annotation. This version of the dataset merges the fine-grained activities that share similar motion into the same activity class. Therefore, this version of dataset is more balanced in terms of the number of samples, with slightly less number of classes (in total 34 activity classes).
 
-
+![](./Balanced_TSU.PNG)
 
 ## Joint-View TSU
 
 The goal of the project is combine footage of same scenario taken by two different cameras placed in 2 diffrerent places and then perform action recognition. This repositry includes various experiments that were performed inconjunction with joint view.
 
-<img src="/Images/Sit_down_v1.gif" width="300" height="200"/> <img src="/Images/Sit_down_v2.gif" width="300" height="200"/> 
+<img src="./Sit_down_v1.gif" width="300" height="200"/> <img src="./Sit_down_v2.gif" width="300" height="200"/> 
 
 
 ### Introduction.
