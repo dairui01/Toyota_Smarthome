@@ -8,6 +8,8 @@ Balanced TSU is a version of the dataset that overlooks the fine-grained details
 
 ## Joint-View TSU
 
+Joint-view TSU targets the joint-view activity detection task. Different from the aforementioned versions, this version of dataset contains only synchronized video pairs to be used for learning joint-view activity detection models.
+
 The goal of the project is to combine footage of the same scenario taken by two different cameras placed in 2 different places and then perform action recognition. This repository includes various experiments that were performed in conjunction with the joint view.
 
 <img src="./Sit_down_v1.gif" width="300" height="200"/> <img src="./Sit_down_v2.gif" width="300" height="200"/> 
