@@ -17,15 +17,14 @@ Please satisfy the following dependencies to use this code correctly:
 ## Model
 In this repository, you can train and test with [PDAN (WACV2021)](https://openaccess.thecvf.com/content/WACV2021/html/Dai_PDAN_Pyramid_Dilated_Attention_Network_for_Action_Detection_WACV_2021_paper.html).  
 
-A pre-trained model for RGB modality and CS protocol can be downloaded in this [link](https://mybox.inria.fr/f/5e006560efaf4e0fb7ac/). The obtained f-mAP should be around 32.7%.
+A pre-trained model (PDAN_TSU_RGB) for RGB modality and CS protocol can be downloaded in this [link](https://mybox.inria.fr/f/5e006560efaf4e0fb7ac/). The obtained f-mAP should be around 32.7%. For loading the pretrained model, you can add/change the `-load_model` parameter to the pre-trained model path (e.g., `'./PDAN_TSU_RGB'`).
+
 
 ## Quick Start
 1. Change the _rgb_root_ or _skeleton_root_ to the extracted feature path in the _train.py_. 
 2. Use `./run_PDAN.sh` for training on TSU-RGB. Evaluation with skeleton can be realized by changing the `-mode` in _run.sh_ to _skeleton_.
 3. The method is evaluated by the per-frame mAP. The event-based mAP can be found at this [repo](https://github.com/dairui01/TSU_evaluation/tree/main/Event_map).
 4. For diiferent split settings (e.g. Cross-Subject or Cross-View), you can change it to either _CS_ or _CV_ for the `-split_setting` parameter in the command. 
-5. For loading the pretrained model, you can add/change the `-load_model` parameter to the pre-trained model path (e.g., `'./PDAN_TSU_RGB'`).
-
 
 
 ## Reference
