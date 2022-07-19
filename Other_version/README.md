@@ -8,27 +8,27 @@ Balanced TSU is a version of the dataset that overlooks the fine-grained details
 
 ## Joint-View TSU
 
-The goal of the project is combine footage of same scenario taken by two different cameras placed in 2 diffrerent places and then perform action recognition. This repositry includes various experiments that were performed inconjunction with joint view.
+The goal of the project is to combine footage of the same scenario taken by two different cameras placed in 2 different places and then perform action recognition. This repository includes various experiments that were performed in conjunction with the joint view.
 
 <img src="./Sit_down_v1.gif" width="300" height="200"/> <img src="./Sit_down_v2.gif" width="300" height="200"/> 
 
 
 ### Introduction.
 
-Joint view action detection/recognition is nothing but combining footage of same scenarios captured in different views to perform action detetction. This is a challenging task for any current state of the art action recognition methods because there is a huge difference in visual features across different views even though the scenario is same. The main aim of the project is to obtain a combined feature level representation/embedding from different views that can be used to improve action detection perdformance.This is done in two steps.
+Joint view action detection/recognition is to combine footage of the same scenarios captured in different views to perform action detection. This is a challenging task for any current state-of-the-art action recognition method because there is a huge difference in visual features across different views even though the scenario is the same. The main aim of the project is to obtain a combined feature-level representation/embedding from different views that can be used to improve action detection performance. This is done in two steps.
 
 1). First we extract the spatio-embeddings of the videos using a pre-trained 3D-CNN network in our case its I3D[1].
 
-2). Then a 2 stream TCN network is used to perform action detection wherein each stream is inputted with a embedding from a particular view and similarily with the other stream.
+2). Then a 2 stream TCN network is used to perform action detection wherein each stream is inputted with an embedding from a particular view and similarily to the other stream.
 
-The main dataset that we used in this project is Toyota smarthome untrimmed dataset[2].
+The main dataset that we used in this project is Toyota Smarthome untrimmed dataset[2].
 
-### Experiments and Terminology.
-Along with joint view we have performed various experiments on the Toyota untrimmed smarthome dataset and have named each folder accordingly. The essential terms necessary to understand the project are .
+## Experiments and Terminology.
+Along with joint view, we have performed various experiments on the Toyota Smarthome untrimmed dataset and have named each folder accordingly. The essential terms necessary to understand the project are:
 
 * Balanced and Unbalanced Dataset.
 
-The original Toyota untrimmed smarthome video dataset has close to 51 actions and the frequency of the occurence of this actions in the videos is highly unbalanced meaning certain actions occur more frequently than other actions and hence this is the reason we call it unbalanced datset. Later on in one of the [experiment](https://github.com/hari431996/joint_view_action_detection/tree/main/balanced_data_un_synchronised_footage%20) we removed certain low frequency actions and obtained a final balanced dataset consiting of only 34 highly occuring actions.
+The original Toyota untrimmed smarthome video dataset has close to 51 actions and the frequency of the occurrence of these actions in the videos is highly unbalanced meaning certain actions occur more frequently than other actions and hence this is the reason we call it an unbalanced dataset. Later on, in one of the experiments we removed certain low-frequency actions and obtained a final balanced dataset consisting of only 34 highly occurring actions.
 
 * Synchronised and unsynchronised.
 
@@ -36,15 +36,15 @@ Given a pair of videos of  two different views  of same scenario, should have ov
 
 * Joint View.
 
-In joint view we utilise features from video pairs of two different views. There are close to 298 videos thereby giving us a pair of 149 videos. The features from this pairs of videos with different views are combined at various stages of a 2-Stream TCN network like for example late [fusion](https://github.com/hari431996/joint_view_action_detection/tree/main/joint_view_late_fusion).
+In joint view we utilise features from video pairs of two different views. There are close to 298 videos thereby giving us a pair of 149 videos. The features from these pairs of videos with different views are combined at various stages of a 2-Stream TCN network like for example late [fusion](https://github.com/hari431996/joint_view_action_detection/tree/main/joint_view_late_fusion).
 
-### JSON Overview.
+## JSON Overview.
 
 There are three kinds of datasets used, they are present in each folder corresponding to the experiment they were utilised in.
 
-1). smarthome_CS_51.json - This is original Toyota smarthome untrimmed dataset (CS protocol). The json file contains annotations of 536 videos and there are 51 class label actions.
+1). smarthome_CS_51.json - This is the original Toyota Smarthome untrimmed dataset (CS protocol). The json file contains annotations of 536 videos and there are 51 class label actions.
 
-2). unbalanced_data_synchronised_footage.json - This datset consists of annotations of 298 videos but the videos are in pairs and each pair have synchronised footage. Also the dataset contains, 51 label actions.
+2). unbalanced_data_synchronised_footage.json - This dataset consists of annotations of 298 videos but the videos are in pairs and each pair have synchronised footage. Also the dataset contains 51 label actions.
 
 3). unsynchronised_balance_data_annotation.json - This dataset consists of annotations of 536 videos but the action labels are only 34 instead of 51 like in the previous datasets.
 
@@ -54,7 +54,3 @@ There are three kinds of datasets used, they are present in each folder correspo
 [1]. Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset, CVPR 2017
 
 <a href="https://arxiv.org/abs/2010.14982" target="_blank">[2]. Toyota Smarthome Untrimmed: Real-World Untrimmed Videos for Activity Detection.</a>
-
-
-
-
