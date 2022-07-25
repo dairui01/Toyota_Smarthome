@@ -3,11 +3,7 @@ import time
 import os
 import argparse
 import sys
-
-# import torchvision.models as models
 import torch
-
-# sys.path.append('/data/stars/user/rdai/PhD_work/Graph_net')
 
 
 def str2bool(v):
