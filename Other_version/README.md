@@ -10,14 +10,14 @@ Balanced TSU is a version of the dataset that overlooks the fine-grained details
 
 Joint-view TSU targets the joint-view activity detection task. Different from the aforementioned versions, this version of dataset contains only synchronized video pairs to be used for learning joint-view activity detection models.
 
-The goal of the project is to combine footage of the same scenario taken by two different cameras placed in 2 different places and then perform action recognition. This repository includes various experiments that were performed in conjunction with the joint view.
+The goal of the project is to combine footage of the same scenario taken by two different cameras placed in 2 different locations and then perform action detection. This repository includes various experiments that were performed in conjunction with the joint view.
 
 <img src="./Sit_down_v1.gif" width="300" height="200"/> <img src="./Sit_down_v2.gif" width="300" height="200"/> 
 
 
 ### Introduction.
 
-Joint view action detection/recognition is to combine footage of the same scenarios captured in different views to perform action detection. This is a challenging task for any current state-of-the-art action recognition method because there is a huge difference in visual features across different views even though the scenario is the same. The main aim of the project is to obtain a combined feature-level representation/embedding from different views that can be used to improve action detection performance. This is done in two steps.
+Joint-view action detection is to combine footage of the same scenarios captured in different views to perform action detection. This is a challenging task for any current state-of-the-art action recognition method because there is a huge difference in visual features across different views even though the scenario is the same. The main aim of the project is to obtain a combined feature-level representation/embedding from different views that can be used to improve action detection performance. This is done in two steps.
 
 1). First we extract the spatio-embeddings of the videos using a pre-trained 3D-CNN network in our case its I3D[1].
 
