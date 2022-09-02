@@ -5,6 +5,8 @@ The dataset description and original video can be request in this [project page]
 
 - Pipline: The action detection baseline code for the TSU dataset. 
 
+- Other version: The joint-view and balanced version of the TSU dataset. 
+
 - Tools
   - 2D Pose Visualization: the visualization of the provided 2D pose data
   
