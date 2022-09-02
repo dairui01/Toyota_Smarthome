@@ -1,4 +1,4 @@
-*2D pose Visualizaiton
+# 2D Pose Visualizaiton
 
 ![](./test.jpg)
 
