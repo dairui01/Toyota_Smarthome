@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-image_path="/u/srvpal/data/people/rdai/smarthome/P11T13C03/00000001.jpg"
+image_path= "./P11T13C03_0000001.jpg" #"/u/srvpal/data/people/rdai/smarthome/P11T13C03/00000001.jpg"
 skeleton=np.load("P11T13C03_LCRNet2d.npz")['kpts']
 img = cv2.imread(image_path)
 
