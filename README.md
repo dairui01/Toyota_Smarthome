@@ -7,8 +7,9 @@ The dataset description and original video can be request in this [project page]
 
 - Other version: The joint-view and balanced version of the TSU dataset. 
 
-- Tools
-  - 2D Pose Visualization: the visualization of the provided 2D pose data
+- Tools 
+  - Pose Visualization: the visualization of the provided pose data
+  - ...
   
 
 
