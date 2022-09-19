@@ -17,6 +17,6 @@ The `pre-trained I3D model` can be downloaded via this [link](https://repo-sam.i
 
 ## Quick start
 
-`Smarthome_SSD_16.sh video_list.txt`
+`./Smarthome_SSD_16.sh video_list.txt`
 
 
