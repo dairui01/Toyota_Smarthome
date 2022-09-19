@@ -8,7 +8,7 @@ The I3D model indicates the model introduced by "[Quo Vadis, Action Recognition?
 Dataset](https://arxiv.org/abs/1705.07750)" by Joao Carreira and Andrew Zisserman. This code is based on Deepmind's [Kinetics-I3D](https://github.com/deepmind/kinetics-i3d). Including PyTorch versions of their models.
 
 ## Note
-This code was written for PyTorch 0.3. The relevant dependencies, such as `tqdm`, `numpy` are also needed.
+This code was written for PyTorch 0.3. The relevant dependencies, such as `opencv`, `tqdm`, `numpy` are also needed.
 
 ## Feature Extraction
 
