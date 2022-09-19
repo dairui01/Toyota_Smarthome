@@ -12,7 +12,7 @@ This code was written for PyTorch 0.3. The relevant dependencies, such as `openc
 
 ## Feature Extraction
 
-[Smarthome_extract_features_ssd.py](Smarthome_extract_features_ssd.py) contains the code to load a pre-trained I3D model and extract the features and save the features as numpy arrays. 
+[Smarthome_extract_features_ssd.py](Smarthome_extract_features_ssd.py) contains the code to load a pre-trained I3D model and extract the features and save the features as numpy arrays. The code is processed by video.
 The `pre-trained I3D model` can be downloaded via this [link](https://repo-sam.inria.fr/smarthome/TSU_16frame_weights_iter64000.pt). The authentication can be obtained while you request the data via our [website](https://project.inria.fr/toyotasmarthome/). 
 
 
