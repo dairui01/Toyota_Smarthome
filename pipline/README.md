@@ -4,7 +4,8 @@ This is the pipeline code for Toyota Smarthome Untrimmed dataset (fine-grained v
 
 ## Prepare the I3D feature
 Like the previous works for action detection, the model can be built on top of the pre-trained I3D features. Thus, feature extraction is needed before training the network (See folder `./I3D`). 
-We have pre-extracted the I3D feature for RGB and 3D pose feature for AGCN. Those features can be downloaded in [dataset website](https://project.inria.fr/toyotasmarthome/).
+
+To evaluate the pipeline, here, we have pre-extracted the I3D feature for RGB and 3D pose feature for AGCN. Those features can be downloaded in [dataset website](https://project.inria.fr/toyotasmarthome/).
 
 ## Dependencies 
 Please satisfy the following dependencies to use this code correctly: 
