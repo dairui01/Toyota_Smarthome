@@ -9,8 +9,6 @@ The dataset description and original video can be request in this [project page]
 
 - Tools 
   - Pose Visualization: the visualization of the provided pose data
-  - ...
-  
 
 
 If you find our repo or paper useful, please cite us as
