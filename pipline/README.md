@@ -21,7 +21,7 @@ In this repository, you can train and test with [PDAN (WACV2021)](https://openac
 
 A pre-trained model (PDAN_TSU_RGB) for RGB modality and CS protocol can be downloaded in this [link](https://mybox.inria.fr/f/5e006560efaf4e0fb7ac/). The obtained f-mAP should be around 32.7%. For loading the pretrained model, you can add/change the `-load_model` parameter to the pre-trained model path (e.g., `'./PDAN_TSU_RGB'`).
 
-The training hyperparameters for MS-TCT (CVPR'22) on TSU can be found [here](https://github.com/dairui01/MS-TCT/issues/4).
+The training hyperparameters for [MS-TCT (CVPR2022)](https://www.computer.org/csdl/proceedings-article/cvpr/2022/694600u0009/1H1mE0mMN9K) on TSU can be found [here](https://github.com/dairui01/MS-TCT/issues/4).
 
 ## Quick Start
 1. Change the _rgb_root_ or _skeleton_root_ to the extracted feature path in the _train.py_. 
